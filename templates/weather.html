@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='weather.css')}}">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="again">
+            <h1>Weather App Dashboard</h1>
+            <h2>Input the city name to see the <br> weather report of the particular area</h2>
+            <form action="{{ url_for('render_results') }}" method="post"><br>
+                <!-- Type the Zip code : -->
+                Type the City name : 
+                <!-- <input type="text" name="zipCode"> <br> -->
+                <input type="text" name="cityCode"> <br>
+                <input type="submit" name="btn" value="Submit" class="btn">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

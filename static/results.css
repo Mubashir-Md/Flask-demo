@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div.whole{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: whitesmoke;
+
+}
+div.whole div.actual{
+    background-color: rgb(10, 10, 124);
+    color: azure;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 2%;
+    padding: 2%;
+    margin: 2%;
+    width: 30%;
+    height: 60%;
+}
+div.actual > *{
+    margin-bottom: 10%;
+    padding: 2%;
+    text-align: center;
+}
