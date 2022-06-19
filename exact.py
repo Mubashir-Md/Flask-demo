@@ -13,16 +13,16 @@ def home():
 
 @app.route('/results', methods=['POST'])
 def render_results():
-    city_code = request.form ['cityCode']
-    wdata = check_weather(city_code,api_key)
+    city_name = request.form ['cityName']
+    wdata = check_weather(city_name,api_key)
     temp = "{0:.2f}".format(wdata["main"]["temp"])
     feels = "{0:.2f}".format(wdata["main"]["feels_like"])
     atmos = wdata["weather"][0]["description"]
     located = wdata["name"]
     return render_template('results.html',temperature=temp,feelsLike=feels,atmosphere=atmos,location=located)
 
-def check_weather(cityCode,apiKey):
-    apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q={}&units=metric&appid={}'.format(cityCode,apiKey)
+def check_weather(city_name,apiKey):
+    apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q={}&units=metric&appid={}'.format(city_name,apiKey)
     r = requests.get(apiUrl)
     return r.json()
 app.run(debug=True)

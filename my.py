@@ -1,10 +1,10 @@
 import requests
+from flask import Flask
 
-url = 'https://www.w3schools.com/python/demopage.php'
-myobj = {'somekey': 'somevalue','mub':'okay'}
+project = Flask(__name__)
 
-x = requests.head(url)
+@project.route('/')
+def home():
+    return "<p>Okay Microsoft</p>"
 
-#print the response text (the content of the requested file):
-
-print(x.text)
+project.run(debug=True)
