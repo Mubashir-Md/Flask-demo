@@ -28,4 +28,4 @@ def check_weather(city_name,apiKey):
     apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q={}&units=metric&appid={}'.format(city_name,apiKey)
     r = requests.get(apiUrl)
     return r.json()
-app.run(debug=True)
+
