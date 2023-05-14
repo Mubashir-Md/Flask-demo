@@ -1,9 +1,12 @@
 import requests
+from dotenv import load_dotenv
+import os
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
- 
-api_key = "55c41a8c0008a6fb324cd1623aceeeae"
+
+load_dotenv() 
+api_key = os.getenv('API_KEY')
 
 
 

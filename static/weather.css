@@ -18,8 +18,8 @@ div.main div.again{
     /* border-radius: 2%; */
     padding: 3%;
     margin: 3%;
-    width: 40%;
-    height: 50%;
+    /* width: 40%; */
+    /* height: 50%; */
 }
 div.again > *{
     margin: 1%;
@@ -33,5 +33,5 @@ div.again .btn{
     color: white;
     border-radius: 2px;
     text-align: center;
-    border: orange 1px solid;
+    border: darkgreen 1px solid;
 }

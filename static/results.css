@@ -18,8 +18,8 @@ div.whole div.actual{
     border-radius: 2%;
     padding: 2%;
     margin: 2%;
-    width: 30%;
-    height: 60%;
+    /* width: 30%; */
+    /* height: 60%; */
 }
 div.actual > *{
     margin-bottom: 10%;
